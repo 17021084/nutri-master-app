@@ -1,31 +1,45 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
-// import Svg, { Use, Image } from "react-native-svg";
-// import logo from '../../../assets/logo_app.png'
-import Logo2 from '../../../assets/images/Logo app.svg'
+import { View, Text, StyleSheet, Dimensions } from "react-native";
+
+import color from "../../constants/color";
+
+import Calo from "../../../assets/images/calories.svg";
+
+const windowWidth = Dimensions.get("window").width;
+const windowHeight = Dimensions.get("window").height;
 
 export default function SplashScreen1() {
   return (
     <View style={styles.container}>
-      <Text>splash screen 1</Text>
-        <Logo2/>
-
+      <Calo width={windowWidth} />
+      <Text style={styles.title}>Search Nutritions </Text>
+      <Text style={styles.desciptions}>
+        You can find the nutritions of food or drinyou can find the nutritions
+        of food or drink by name
+      </Text>
     </View>
   );
 }
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#ff2",
+    paddingTop: windowHeight * 0.1,
     alignItems: "center",
-    justifyContent: "center",
-    // flex:1
-    // width: ,
-    // display:'flex'
   },
-  image: {
-    // flex: 1,
-    backgroundColor: "blue",
-    height: 163,
-    width: 163,
+  title: {
+    fontFamily: "vinc-hand",
+    fontSize: 56,
+    fontWeight: "900",
+    color: color.pink,
+    marginTop: 50,
+    textAlign: "center",
+  },
+  desciptions: {
+    fontFamily: "one-sans",
+    fontSize: 20,
+    fontWeight: "200",
+    paddingLeft: 30,
+    paddingRight: 30,
+    marginTop: 50,
+    textAlign: "center",
   },
 });
