@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import SplashScreen1 from "./src/screens/unAuthScreens/SplashScreen1";
+import SplashScreen2 from "./src/screens/unAuthScreens/SplashScreen2";
 import { useFonts } from "expo-font";
 
 export default function App() {
@@ -18,7 +18,7 @@ export default function App() {
   } else {
     return (
       <View style={styles.container}>
-        <SplashScreen1></SplashScreen1>
+        <SplashScreen2></SplashScreen2>
       </View>
     );
   }
