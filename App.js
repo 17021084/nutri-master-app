@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import SplashScreen2 from "./src/screens/unAuthScreens/SplashScreen2";
 import { useFonts } from "expo-font";
+import SignInScreen from "./src/screens/unAuthScreens/SignInScreen";
+import SignUpScreen from "./src/screens/unAuthScreens/SignUpScreen";
 
 export default function App() {
   const [loaded, error] = useFonts({
@@ -18,7 +20,7 @@ export default function App() {
   } else {
     return (
       <View style={styles.container}>
-        <SplashScreen2></SplashScreen2>
+      <SignUpScreen></SignUpScreen>
       </View>
     );
   }
