@@ -20,6 +20,14 @@ export default function SignUpScreen() {
       <Logo />
 
       <RoundedInput
+        label={"Name"}
+        value={"email@gmail.com"}
+        placeholder={"asdasdsa"}
+        onChangeText={() => {
+          console.log("abc");
+        }}
+      />
+      <RoundedInput
         label={"Email"}
         value={"email@gmail.com"}
         placeholder={"asdasdsa"}
@@ -37,6 +45,16 @@ export default function SignUpScreen() {
           console.log("password");
         }}
       />
+      <RoundedInput
+        label={"Confirm Password"}
+        value={"1234567"}
+        type={"password"}
+        placeholder={"password"}
+        onChangeText={() => {
+          console.log("password");
+        }}
+      />
+
       <RoundedButton
         onPress={() => {
           console.log("123");
@@ -46,18 +64,6 @@ export default function SignUpScreen() {
       >
         <Text style={styles.buttonTitle}>Login </Text>
       </RoundedButton>
-
-      <View>
-        <TouchableOpacity>
-          <Text style={styles.textForgot}>Did you forgot password ? </Text>
-        </TouchableOpacity>
-        <Text style={styles.textRegister}>
-          Do you have any acount ?
-          <TouchableOpacity>
-            <Text style={styles.register}> Register</Text>
-          </TouchableOpacity>
-        </Text>
-      </View>
     </View>
   );
 }
