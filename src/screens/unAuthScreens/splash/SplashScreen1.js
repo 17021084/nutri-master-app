@@ -1,9 +1,9 @@
 import React from "react";
 import { View, Text, StyleSheet, Dimensions } from "react-native";
 
-import color from "../../constants/color";
+import color from "../../../constants/color";
 
-import Calo from "../../../assets/images/calories.svg";
+import Calo from "../../../../assets/images/calories.svg";
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;

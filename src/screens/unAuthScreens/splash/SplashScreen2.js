@@ -1,15 +1,15 @@
 import React from "react";
 import { View, Text, StyleSheet, Dimensions } from "react-native";
 
-import color from "../../constants/color";
+import color from "../../../constants/color";
 
-import Diet from "../../../assets/images/diet plan.svg";
-import RoundedButton from "../../components/RoundedButton";
+import Diet from "../../../../assets/images/diet plan.svg";
+import RoundedButton from "../../../components/RoundedButton";
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
-export default function SplashScreen2() {
+export default function SplashScreen2({ navigation }) {
   return (
     <View style={styles.container}>
       <Diet width={windowWidth} />
@@ -19,7 +19,7 @@ export default function SplashScreen2() {
       </Text>
       <RoundedButton
         onPress={() => {
-          console.log("123");
+          navigation.navigate("signin");
         }}
         backgroundColor={"pink"}
         width={windowWidth * 0.8}

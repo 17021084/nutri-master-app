@@ -1,17 +1,21 @@
-import { StatusBar } from "expo-status-bar";
+import "react-native-gesture-handler";
 import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import SplashScreen2 from "./src/screens/unAuthScreens/SplashScreen2";
 import { useFonts } from "expo-font";
-import SignInScreen from "./src/screens/unAuthScreens/SignInScreen";
-import SignUpScreen from "./src/screens/unAuthScreens/SignUpScreen";
+import { NavigationContainer } from "@react-navigation/native";
+import RoundedButton from "./src/components/RoundedButton";
+import UnAuthStack from "./src/navigations/UnAuthStack";
+
+// const Stack = createStackNavigator();
 
 export default function App() {
-  const [loaded, error] = useFonts({
+  const [loaded] = useFonts({
     "open-sans": require("./assets/fonts/OpenSans-Regular.ttf"),
     "open-sans-bold": require("./assets/fonts/OpenSans-Bold.ttf"),
     "vinc-hand": require("./assets/fonts/VINCHAND.ttf"),
   });
+
+  const [token, setToken] = useState(false);
 
   if (!loaded) {
     return (
@@ -19,12 +23,33 @@ export default function App() {
     );
   } else {
     return (
-      <View style={styles.container}>
-      <SignUpScreen></SignUpScreen>
-      </View>
+      <NavigationContainer style={styles.container}>
+        <UnAuthStack/>
+      </NavigationContainer>
     );
   }
 }
+
+// <RoundedButton
+//   onPress={() => {
+//     setToken(true);
+//   }}
+// >
+//   <Text> ingnore login</Text>
+// </RoundedButton>;
+
+// const UnAuthStack = () => (
+//   <Stack.Navigator screenOptions={{ headerShown: false }}>
+//     <Stack.Screen name="splash" component={RootSplashScreen} />
+//     <Stack.Screen name="signin" component={SignInScreen} />
+//     <Stack.Screen name="signup" component={SignUpScreen} />
+//   </Stack.Navigator>
+// );
+// const AuthStack = () => (
+//   <Stack.Navigator screenOptions={{ headerShown: false }}>
+//     <Stack.Screen name="signup" component={SignUpScreen} />
+//   </Stack.Navigator>
+// );
 
 const styles = StyleSheet.create({
   container: {
