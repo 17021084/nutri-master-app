@@ -14,7 +14,7 @@ import color from "../../constants/color";
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
-export default function SignInScreen() {
+export default function SignInScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Logo />
@@ -42,7 +42,7 @@ export default function SignInScreen() {
           console.log("123");
         }}
         backgroundColor={"pink"}
-        width={windowWidth * 0.8}
+        // width={windowWidth}
       >
         <Text style={styles.buttonTitle}>Login </Text>
       </RoundedButton>
@@ -53,7 +53,11 @@ export default function SignInScreen() {
         </TouchableOpacity>
         <Text style={styles.textRegister}>
           Do you have any acount ?
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate("signup");
+            }}
+          >
             <Text style={styles.register}> Register</Text>
           </TouchableOpacity>
         </Text>
@@ -65,6 +69,7 @@ export default function SignInScreen() {
 const styles = StyleSheet.create({
   container: {
     paddingTop: windowHeight * 0.2,
+    paddingHorizontal: windowWidth * 0.05,
   },
   buttonTitle: {
     color: "#fff",

@@ -14,7 +14,7 @@ import color from "../../constants/color";
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
-export default function SignUpScreen() {
+export default function SignUpScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Logo />
@@ -60,9 +60,8 @@ export default function SignUpScreen() {
           console.log("123");
         }}
         backgroundColor={"pink"}
-        width={windowWidth * 0.8}
       >
-        <Text style={styles.buttonTitle}>Login </Text>
+        <Text style={styles.buttonTitle}>Register </Text>
       </RoundedButton>
     </View>
   );
@@ -71,6 +70,7 @@ export default function SignUpScreen() {
 const styles = StyleSheet.create({
   container: {
     paddingTop: windowHeight * 0.2,
+    paddingHorizontal: windowWidth * 0.05,
   },
   buttonTitle: {
     color: "#fff",
