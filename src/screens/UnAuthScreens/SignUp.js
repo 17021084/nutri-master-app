@@ -142,8 +142,8 @@ const styles = StyleSheet.create({
   },
   image: {
     alignSelf: "center",
-    height: 197,
-    width: 236,
+    height: 155,
+    width: 155,
   },
   infor: {
     marginTop: 10,

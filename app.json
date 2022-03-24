@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Tour guide",
-    "slug": "tour-guide-app",
+    "name": "Nutrition master",
+    "slug": "Nutrition master",
     "version": "2.2.2",
     "orientation": "portrait",
     "icon": "./assets/icon-ios.png",
