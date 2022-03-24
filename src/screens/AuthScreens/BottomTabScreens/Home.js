@@ -56,7 +56,7 @@ function Home({
 
   return (
     <View>
-      <MapSearch />
+      {/* <MapSearch /> */}
       <View style={styles.nameBox}>
         <Text style={styles.address}> Xin chào:{userInfor.name} </Text>
       </View>

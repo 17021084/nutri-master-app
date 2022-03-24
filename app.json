@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Nutrition master",
-    "slug": "Nutrition master",
+    "slug": "nutrition-master",
     "version": "2.2.2",
     "orientation": "portrait",
     "icon": "./assets/icon-ios.png",

@@ -5,12 +5,14 @@ import {
   HOME_SCREEN,
   JOURNEY_TRACK_SCREEN,
   JOURNEY_LIST_SCREEN,
+  EXERCISE_SCREEN,
 } from "../../ScreenName";
 
 import Home from "./Home";
 import UserDetails from "./UserDetails";
 import JourneyList from "./JourneyList";
 import JourneyTrack from "./JourneyTrack";
+import Exercise from "./Exercise";
 
 const BottomStack = createBottomTabNavigator();
 export default function BottomTabScreens() {
@@ -18,10 +20,11 @@ export default function BottomTabScreens() {
     <BottomStack.Navigator initialRouteName={HOME_SCREEN}>
       <BottomStack.Screen name={USER_DETAILS} component={UserDetails} />
       <BottomStack.Screen name={HOME_SCREEN} component={Home} />
-      <BottomStack.Screen
+      <BottomStack.Screen name={EXERCISE_SCREEN} component={Exercise} />
+      {/* <BottomStack.Screen
         name={JOURNEY_TRACK_SCREEN}
         component={JourneyTrack}
-      />
+      /> */}
       <BottomStack.Screen name={JOURNEY_LIST_SCREEN} component={JourneyList} />
     </BottomStack.Navigator>
   );

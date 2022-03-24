@@ -13,6 +13,10 @@ export const HOME_SCREEN = "Tra cứu";
 export const USER_DETAILS = "User";
 export const JOURNEY_LIST_SCREEN = "các chuyến đi";
 
+export const EXERCISE_SCREEN = "Exercise";
+export const EXERCISE_DETAIL_SCREEN = "Exercise Details";
+export const NUTRITION_SCREEN = "NUTRITION_SCREEN";
+
 //Journey Screen
 export const JOURNEY_SCREEN = "Journey List";
 export const JOURNEY_TRACK_SCREEN = "Theo dõi";
