@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "Tour guide",
+    "slug": "tour-guide-app",
+    "version": "2.2.2",
+    "orientation": "portrait",
+    "icon": "./assets/icon-ios.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "location",
+          "fetch"
+        ],
+        "NSLocationWhenInUseUsageDescription": "text",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "text",
+        "NSLocationAlwaysUsageDescription": "text"
+      },
+      "bundleIdentifier": "com.wannchunn.tour-guide-app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "useNextNotificationsApi": true,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCsqn7xo62urKvp4uy3ktHX5HDPzcWVjbg"
+        }
+      },
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION"
+      ],
+      "package": "com.wannchunn.tourguideapp"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
