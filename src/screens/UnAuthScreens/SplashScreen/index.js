@@ -5,19 +5,20 @@ import Swiper from "react-native-swiper/src";
 import ButtonBox from "../../../components/common/ButtonBox";
 
 import { SIGN_IN_SCREEN } from "../../ScreenName";
-import splash1 from "../../../../assets/icons/decree.png";
-import splash2 from "../../../../assets/icons/Search.png";
-import splash3 from "../../../../assets/icons/Map-light.png";
+import splash1 from "../../../../assets/icons/calories.png";
+import splash2 from "../../../../assets/icons/diet_plan.png";
 
-const splashText1 = "Tìm hiểu lịch sử thông qua du lịch ";
-const splashText2 = "Tìm Hiểu nhân vật lịch sử Việt Nam ";
-const splashText3 =
-  "Lưu lại hành trình trên những chuyến đường mang tên vĩ nhân đó ";
+const splashText1 =
+  "You can find the nutritions of food or drink by name   ";
+const splashText2 =
+  "you can create your favor recipe and analysis nutrition of recipe  ";
 
+const title1 = "Nutrition Search";
+const title2 = "Analysis exercise or recipe";
 export default function SplashScreen({ navigation }) {
   const NavigateLogin = (
     <ButtonBox
-      title={"Cùng Bắt đầu nào "}
+      title={"Here we go  "}
       onPress={() => {
         navigation.navigate(SIGN_IN_SCREEN);
       }}
@@ -28,6 +29,7 @@ export default function SplashScreen({ navigation }) {
     <Swiper loop={false} autoplay={false} showsButtons={false}>
       <Splash
         content={splashText1}
+        header={title1}
         image={{
           image: splash1,
           dimension: {
@@ -38,22 +40,13 @@ export default function SplashScreen({ navigation }) {
       ></Splash>
       <Splash
         content={splashText2}
+        header={title2}
+        button={NavigateLogin}
         image={{
           image: splash2,
           dimension: {
-            width: 354,
-            height: 413,
-          },
-        }}
-      ></Splash>
-      <Splash
-        content={splashText3}
-        button={NavigateLogin}
-        image={{
-          image: splash3,
-          dimension: {
-            width: 369,
-            height: 428,
+            width: 410,
+            height: 261,
           },
         }}
       ></Splash>

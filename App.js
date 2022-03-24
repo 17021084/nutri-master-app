@@ -9,7 +9,6 @@ import UnAuthScreens from "./src/screens/UnAuthScreens";
 import { ActivityIndicator, View } from "react-native";
 import { useFonts } from "expo-font";
 
-console.disableYellowBox = true;
 if (firebase.apps.length === 0) {
   firebase.initializeApp(firebaseConfig);
 }
