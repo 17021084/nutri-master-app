@@ -42,21 +42,21 @@ function AuthScreens({
   fetchFriendJourney,
   friendJourneyFetched,
 }) {
-  useEffect(() => {
-    fetchBookmark();
-    fetchJourneyList();
-    fetchUserInfor();
-    fetchFriendJourney();
-  }, []);
-  if (!bookmarkFetched || !journeyListFetched || !userInforFetched||!friendJourneyFetched) {
-    return (
-      <View
-        style={{ flex: 1, justifyContent: "center", alignContent: "center" }}
-      >
-        <ActivityIndicator size="large" />
-      </View>
-    );
-  }
+  // useEffect(() => {
+  //   fetchBookmark();
+  //   fetchJourneyList();
+  //   fetchUserInfor();
+  //   fetchFriendJourney();
+  // }, []);
+  // if (!bookmarkFetched || !journeyListFetched || !userInforFetched||!friendJourneyFetched) {
+  //   return (
+  //     <View
+  //       style={{ flex: 1, justifyContent: "center", alignContent: "center" }}
+  //     >
+  //       <ActivityIndicator size="large" />
+  //     </View>
+  //   );
+  // }
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName={BOTTOM_TAB_SCREEN}>

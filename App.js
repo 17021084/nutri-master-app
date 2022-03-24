@@ -42,9 +42,9 @@ export default function App() {
       </View>
     );
   }
-  if (!isLogin) {
-    return <UnAuthScreens />;
-  }
+  // if (!isLogin) {
+  //   return <UnAuthScreens />;
+  // }
   return (
     <Provider store={store}>
       <AuthScreens />

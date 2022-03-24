@@ -10,7 +10,7 @@ export const CONCERN_SCREEN = "Thông tin liên quan";
 // Bottom Tab Screen
 export const BOTTOM_TAB_SCREEN = "Màn hình chính";
 export const HOME_SCREEN = "Tra cứu";
-export const BOOKMARK_SCREEN = "Lưu trữ";
+export const USER_DETAILS = "User";
 export const JOURNEY_LIST_SCREEN = "các chuyến đi";
 
 //Journey Screen
